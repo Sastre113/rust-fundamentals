@@ -1,6 +1,3 @@
-
-
-
 fn main() {
     let a_number; // Declaración de variable. Por defecto en Rust son Inmutables.
     a_number = 5; // Asignación del valor. Esta variable es Inmutable, no se podrá alterar
@@ -77,3 +74,4 @@ fn main() {
 
     println!("{} is a {}{}{}{}.", smiley_face, character_1, string_1, character_2, string_2);
 }   
+
