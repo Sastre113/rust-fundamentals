@@ -3,6 +3,7 @@ La primera tarea consiste en corregir problemas de sintaxis en la definición de
 */
 
 // Declare Car struct to describe vehicle with four named fields
+#[derive(Debug)]
 struct Car {
     color: String,
     transmission: Transmission,
@@ -19,17 +20,28 @@ enum Transmission {
 }
 
 
-// Build a "Car" by using values from the input arguments
+// Build a "Car" by usin
+// values from the input arguments
 // - Color of car (String)
 // - Transmission type (enum value)
 // - Convertible (boolean, true if car is a convertible)
-fn car_factory(color: String, transmission: Transmission, convertible: bool) {
+fn car_factory(color: String, transmission: Transmission, convertible: bool) -> Car {
 
     // Use the values of the input arguments
     // All new cars always have zero mileage
-    let car: Car = todo!("Create an instance of a `Car` struct");
+    return Car {color, transmission, convertible, mileage: 0};
 }
 
 fn main() { 
+  let myCar = car_factory(String::from("Red"), Transmission::Manual, true);
+  println!("{:?}", myCar);
 
+  let mut car = car_factory(String::from("Red"), Transmission::Manual, false);
+  println!("Car 1 = {}, {:?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);
+
+  car = car_factory(String::from("Silver"), Transmission::Automatic, true);
+  println!("Car 2 = {}, {:?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);
+
+  car = car_factory(String::from("Yellow"), Transmission::SemiAuto, false);
+  println!("Car 3 = {}, {:?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);    
 }
