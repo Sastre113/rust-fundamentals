@@ -43,5 +43,5 @@ fn main() {
   println!("Car 2 = {}, {:?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);
 
   car = car_factory(String::from("Yellow"), Transmission::SemiAuto, false);
-  println!("Car 3 = {}, {:?} transmission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);    
+  println!("Car 3 = {}, {:?} tran smission, convertible: {}, mileage: {}", car.color, car.transmission, car.convertible, car.mileage);    
 }
