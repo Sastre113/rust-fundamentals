@@ -1,6 +1,7 @@
 mod cli;
 
-fn main() {
-    println!("Hello, world!");
-}
+use structopt::StructOpt;
 
+fn main() {
+    println!("{:#?}", cli::CommandLineArgs::from_args());
+}
