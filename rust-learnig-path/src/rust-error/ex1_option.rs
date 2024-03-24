@@ -27,6 +27,7 @@ fn main() {
     };
     assert_eq!(build_full_name(&john), "James Oliver Smith");
 
+    
     let alice = Person {
         first: String::from("Alice"),
         middle: None,
